@@ -180,10 +180,10 @@ public class VistaInicio extends javax.swing.JFrame {
         try{
             rs = db.execute("SELECT cedula FROM persona WHERE cedula = "+cedula+" AND contraseña = '"+contraseña+"';");
             if(!rs.next()){
-                System.out.print("PUES NO");
+                System.out.print("NO");
                 this.errorLabel.setText("Cedula o contraseña incorrecta...");
             }else{
-                System.out.print("PUES SI");
+                System.out.print("SI");
                 this.setVisible(false);
                 new VistaProducto().setVisible(true);
             }
